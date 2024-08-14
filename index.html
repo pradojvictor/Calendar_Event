@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="img/favicon.ico.jpg" type="image/x-icon"/>
+    <title>Calendar</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="left">
+            <div class="calendar">
+                <div class="month">
+                    <i class="fa fa-angle-left prev"></i>
+                    <div class="date"></div>
+                    <i class="fa fa-angle-right next"></i>
+                </div>
+                <div class="weekdays">
+                    <div>dom</div>
+                    <div>seg</div>
+                    <div>ter</div>
+                    <div>qua</div>
+                    <div>qui</div>
+                    <div>sex</div>
+                    <div>sab</div>
+                </div>
+                <div class="days">
+
+                </div>
+                <div class="goto-today">
+                    <button class="today-bnt">Hoje</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="today-date">
+                <div class="event-day"></div>
+                <div class="event-date"></div>
+            </div>
+            <div class="events"></div>
+            <div class="add-event-wrapper">
+                <div class="add-event-header">
+                    <div class="title">Novo Pedido</div>
+                    <i class="fas fa-times close"></i>
+                </div>
+                <div class="add-event-body">
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Nome da Cliente" class="event-name">
+                    </div>
+                    <div class="add-event-input">
+                        <input type="text" placeholder="Vestido" class="event-description">
+                    </div>
+                </div>
+                <div class="add-event-footer">
+                    <button class="add-event-bnt">Salvar</button>
+                </div>
+            </div>
+        </div>
+        <button class="add-event">
+            <i class="fas fa-plus"></i>
+        </button>
+        <div class="modal">
+            <img src="img/Owl1.gif" alt="this slowpoke moves"  width="250" alt="404 image"/>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
