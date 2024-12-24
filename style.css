@@ -512,6 +512,13 @@ button:hover, a:hover{
     .right .today-date {
       padding: 20px;
     }
+    .modal{
+        height: auto;
+        width: 4rem;
+        position: absolute;
+        top: 9%;
+        left: 18%;
+    }
   }
   
   .credits {
