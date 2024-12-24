@@ -4,7 +4,6 @@ const calendar = document.querySelector(".calendar"),
     prev = document.querySelector(".prev"),
     next = document.querySelector(".next"),
     todayBnt = document.querySelector(".today-bnt"),
-    // dateInput = document.querySelector(".date-input"),
     eventDay = document.querySelector(".event-day"),
     eventDate = document.querySelector(".event-date"),
     eventsContainer = document.querySelector(".events"),
@@ -199,8 +198,7 @@ function getActiveDay(date) {
     const dayName = day.toLocaleDateString('pt-BR', options).split(" ")[0];
     eventDay.innerHTML = dayName;
     eventDate.innerHTML = date + " " + months[month] + " " + year;
-};
-
+}; 
 function updateEvents(date) {
     let events = "";
     eventsArr.forEach((event) => {

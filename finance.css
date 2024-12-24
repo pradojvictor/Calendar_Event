@@ -1,0 +1,287 @@
+:root{
+    --primary-clr: #b38add;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2e1dc;
+    background: url(img/OwlBG.gif) center;
+    background-size: auto;
+}
+.container{
+    position: relative;
+    width: 1200px;
+    min-height: 90vh;
+    margin: 0 10px;
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    background-color: transparent; /* ou mudar de cor o*/
+}
+.btn-calendar{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+a{
+    text-align: center;
+    width: 100%;
+    padding: 10px 40px; 
+    border: 1px solid var(--primary-clr);
+    border-radius: 5px;
+    background-color: var(--primary-clr);
+    cursor: pointer;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    font-weight: 500; 
+    text-decoration: none;
+    color: white; 
+}
+
+a:hover {
+    background-color: white;
+    color: var(--primary-clr);
+}
+.summary{
+    background: transparent; /*branco */
+    border: 1px solid transparent; /*tranparente */
+    border-radius: 5px;
+    min-height: 80vh;
+}
+.display-box{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+img{
+    width: 40px;
+}
+.display-1, .display-2, .display-3{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid rgb(231, 231, 231);
+    text-align: center;
+}
+
+.box-valor{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.valor-go, .valor-exit, .valor-total, h2{
+    color: black;
+}
+h2{
+    font-size: 20px;
+}
+
+.add-note{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.add-note button{
+    width: 50%;
+    height: 40px;
+    border: 1px solid var(--primary-clr);
+    border-radius: 10px;
+    background-color: var(--primary-clr);
+    color: white;
+    font-size: 30px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.add-note button:hover{
+    background-color: white;
+    color: var(--primary-clr);
+}
+
+.event{
+    background-color:  #b38add;
+    padding: 5px 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.painel-events{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 60vh;
+}
+.painel-events .event:nth-child(even){
+    background-color:  #f0f0f0c4;
+    color: var(--primary-clr);
+}
+.painel-events .event:hover{
+    background-color:  wheat;
+}
+
+.title{
+    width: 130px; 
+    padding: 0;
+    margin: 0;
+}
+.valo{
+    width: 70px;
+    display: flex;
+    gap: 4px; 
+    padding: 0;
+    margin: 0;
+}
+.status{
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+.date-hora{
+    width: 100px;
+    padding: 0;
+    margin: 0;
+}
+/*-----------------modal------------------*/
+.add-note-wrapper{
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: white;
+    transform: translateX(-50%);
+    transition: max-height 0.5s;
+}
+.add-note-wrapper.active{
+    max-height: 300px;
+}
+.add-note-header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    color: #373c4f;
+    border-bottom: 1px solid #f5f5f5;
+}
+.add-note-header .close{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.close:hover{
+    color: var(--primary-clr);
+}
+h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.add-note-body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+}
+.add-note-body .add-note-input{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.add-note-body .add-note-input input, select{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 5px solid #f5f5f5;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #373c4f;
+}
+select option{
+    color: var(--primary-clr);
+}
+.add-note-body .add-note-input input::placeholder{
+    color: #a5a5a5;
+}
+.add-note-body .add-note-input input:focus{
+    border-color: var(--primary-clr);
+}
+.add-note-body .add-note-input input:focus::placeholder{
+    color: var(--primary-clr);
+}
+.add-note-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.add-note-bnt{
+    height: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: var(--primary-clr);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 1px solid var(--primary-clr);
+}
+.add-note-bnt:hover{
+    color: var(--primary-clr);
+    background-color: transparent;
+}
+
+.div-btn-delete{
+    margin: 0;
+    padding: 5px;
+}
+.btn-delete{
+    background: transparent;
+    border: none;
+    width: auto;
+}
+.btn-delete img{
+    width: 25px;
+}
+
+@media screen and (max-width: 500px){
+    .display-1, .display-2, .display-3{
+        width: 130px;
+        padding: 0;
+    }
+    img{
+        width: 25px;
+    }
+    .add-note-wrapper{
+        bottom: 20px;
+        width: 91%;
+       
+    }
+}

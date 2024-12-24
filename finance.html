@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="finance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="img/favicon.ico.jpg" type="image/x-icon" />
+    <title>Calendar</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="btn-calendar">
+            <a href="index.html">Voltar Calendario</a>
+        </div>
+        <div class="summary">
+            <div class="display-box">
+                <div class="display-1">
+                    <img src="img/saco-de-dolar.svg" alt="icon finance">
+                    <div class="inf-display">
+                        <h2>Entrou</h2>
+                        <div box-valor>
+                            <div class="valor-go">
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="display-2">
+                    <img src="img/dinheiro-cheque-editar.svg" alt="icon finance">
+                    <div class="inf-display">
+                        <h2>Saiu</h2>
+                        <div box-valor>
+                            <div class="valor-exit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="display-3">
+                    <img src="img/cofrinho.svg" alt="icon finance">
+                    <div class="inf-display">
+                        <h2>Caixa</h2>
+                        <div box-valor>
+                            <div class="valor-total">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-note">
+                <button class="add-note-btn">+</button>
+            </div>        
+            <div class="painel-events">
+                <!-- javascript -->
+            </div>
+                <div class="add-note-wrapper"> 
+                    <div class="add-note-header">
+                        <h3>Nova Entrada</h3>
+                        <i class="fas fa-times close"></i>
+                    </div>
+                    <div class="add-note-body">
+                        <div class="add-note-input">
+                            <input type="text" placeholder="nome" class="note-name"/>
+                        </div>
+                        <div class="add-note-input">
+                            <input type="date" class="note-date"/>
+                        </div>
+                        <div class="add-note-input">
+                            <input type="text" class="note-valo" placeholder="valor"/>
+                        </div>
+                        <div class="add-note-input">
+                            <select class="note-select">
+                                <option >entrou</option>
+                                <option >saiu</option>
+                            </select>
+                            <div class="add-note-footer">
+                                <button class="add-note-bnt">salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+    <script src="script2.js"></script>
+</body>
+
+</html>
